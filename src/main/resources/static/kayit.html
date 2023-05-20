@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Otopark</title>
+    <script src="kayit.js"></script>
+    <script src="dogrulama.js"></script>
+</head>
+<body><h1>Tasit Kayit</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form class="form">
+                <div class="form-group">
+                    <label for="tc">TC</label>
+                    <input type="text" class="form-control" id="tc" onchange="tcDogrula()">
+                    <span id="failTc" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="ad">Ad</label>
+                    <input type="text" class="form-control" id="ad" onchange="adDogrula()">
+                    <span id="failAd" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="adres">Adres</label>
+                    <input type="text" class="form-control" id="adres" onchange="adresDogrula()">
+                    <span id="failAdres" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="plaka">Plaka</label>
+                    <input type="text" class="form-control" id="plaka" onchange="plakaDogrula()">
+                    <span id="failPlaka" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="marka">Marka</label>
+                    <div id="marka" class="dropdown"></div>
+                    <span id="failMarka" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <div id="model" class="dropdown"></div>
+                    <span id="failModel" style="color: red"></span>
+                </div>
+            </form>
+            <button onclick="tasitKayit()" class="btn btn-primary">Kaydet</button>
+            <br></div>
+    </div>
+    <div id="hata"></div>
+</div>
+</body>
+</html>
